@@ -26,7 +26,28 @@ const getAllProducts = async (req, res) => {
   }
 };
 
+// featch product by name
+const getProductByName = async (req, res) => {
+  try {
+    const { x } = req.params;
+    const findProductByName = await Product.find({ name: x });
+    console.log(findProductByName);
+
+    if (findProductByName.length > 0) {
+      res.status(201).json({
+        success: true,
+        findProductByName,
+      });
+    } else {
+      res.send('no product found');
+    }
+  } catch (err) {
+    console.log(err);
+  }
+};
+
 module.exports = {
   postProducts,
   getAllProducts,
+  getProductByName,
 };

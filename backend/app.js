@@ -1,4 +1,5 @@
 const express = require('express');
+const cors = require('cors');
 
 // database
 require('./models/db');
@@ -6,6 +7,7 @@ require('./models/db');
 const indexRouter = require('./routes/indexRouter');
 
 const app = express();
+app.use(cors());
 const port = process.env.POST || 5000;
 
 // Middlware
