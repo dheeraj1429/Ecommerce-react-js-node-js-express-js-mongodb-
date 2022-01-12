@@ -1,13 +1,18 @@
 const express = require('express');
 const cors = require('cors');
 
+const app = express();
+
 // database
 require('./models/db');
 
+// Routers
 const indexRouter = require('./routes/indexRouter');
 
-const app = express();
+// Middleware
 app.use(cors());
+app.use(express.json());
+
 const port = process.env.POST || 5000;
 
 // Middlware

@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "node app.js",
-    "dev": "nodemon app.js"
+    "dev": "nodemon app.js --ignore '../frountend/'"
   },
   "dependencies": {
     "cors": "^2.8.5",

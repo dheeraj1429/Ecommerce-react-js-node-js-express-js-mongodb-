@@ -30,16 +30,17 @@ const getAllProducts = async (req, res) => {
 const getProductByName = async (req, res) => {
   try {
     const { x } = req.params;
+    console.log(req.body);
     const findProductByName = await Product.find({ name: x });
     console.log(findProductByName);
 
     if (findProductByName.length > 0) {
-      res.status(201).json({
+      res.status(200).json({
         success: true,
         findProductByName,
       });
     } else {
-      res.send('no product found');
+      res.status(400).send('no product found');
     }
   } catch (err) {
     console.log(err);

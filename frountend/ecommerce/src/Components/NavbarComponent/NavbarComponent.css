@@ -1,0 +1,52 @@
+.Navbar__Inner_Div {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+.Navbar__inner_logo h1 {
+   font-size: 2.4rem;
+}
+.SearchBar__Div {
+   border: 3px solid var(--lightYellow);
+   width: 60%;
+   height: 50px;
+   border-radius: 30px;
+   display: flex;
+   overflow: hidden;
+}
+
+.NavbarBar__Icons_Div {
+   width: 12%;
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+}
+.NavbarBar__Icons_Div i {
+   font-size: 1.5rem;
+   color: var(--IconsColor);
+}
+.MyCart {
+   display: flex;
+   align-items: center;
+   position: relative;
+}
+.TotalItem {
+   position: absolute;
+   top: -17px;
+   left: 0;
+   width: 20px;
+   height: 20px;
+   background-color: var(--darkRed);
+   border-radius: 50%;
+   color: var(--mainColor);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.TotalItem p {
+   font-size: 0.7rem;
+   margin-right: 5px;
+}
+.MyCart p {
+   margin-left: 0.4rem;
+}
