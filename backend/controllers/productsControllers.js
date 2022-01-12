@@ -16,11 +16,17 @@ const postProducts = async (req, res) => {
 const getAllProducts = async (req, res) => {
   try {
     const allProduct = await Product.find();
-    console.log(allProduct);
-    res.status(200).json({
-      success: true,
-      allProduct,
-    });
+
+    if (allProduct) {
+      res.status('200').json({
+        success: true,
+        allProduct,
+      });
+    } else {
+      res.status(400).json({
+        success: false,
+      });
+    }
   } catch (err) {
     console.log(err);
   }
@@ -40,7 +46,9 @@ const getProductByName = async (req, res) => {
         findProductByName,
       });
     } else {
-      res.status(400).send('no product found');
+      res.status(400).json({
+        success: false,
+      });
     }
   } catch (err) {
     console.log(err);

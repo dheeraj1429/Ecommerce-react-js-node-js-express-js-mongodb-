@@ -6,7 +6,7 @@
 .Banner_content_div {
   width: 80%;
   height: 522px;
-  padding: 2rem;
+  padding: 2rem 3rem;
   background-position: top;
   background-size: cover;
   display: flex;
@@ -18,10 +18,16 @@
 }
 
 .Banner_Contnet h1 {
-  font-size: 6rem;
+  font-size: 5rem;
+}
+
+.Banner__inner_div h3 {
+  color: var(--LightGray);
 }
 
 .Banner_Contnet p {
   color: var(--IconsColor);
   margin-bottom: 4rem;
+  line-height: 1.6;
+  color: var(--LightGray);
 }

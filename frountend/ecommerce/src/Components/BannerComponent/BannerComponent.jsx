@@ -14,11 +14,11 @@ function BannerComponent() {
         <div
           className="Banner_content_div"
           style={{
-            backgroundImage:
-              'url(https://images.unsplash.com/photo-1541096017664-085dd9a616c3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1084&q=80)',
+            backgroundImage: 'url(https://opencart.dostguru.com/MS13/readymart_03/image/cache/catalog/slider/S2-1230x555.jpg)',
           }}
         >
           <div className="Banner_Contnet">
+            <h3>SPPING - SUMMER 2021</h3>
             <h1>New Arrivals</h1>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat illo adipisci blanditiis, suscipit quibusdam aut corporis ut quisquam

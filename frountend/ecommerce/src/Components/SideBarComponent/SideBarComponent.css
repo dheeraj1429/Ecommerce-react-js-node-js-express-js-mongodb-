@@ -1,6 +1,6 @@
 .SideBar_Div {
   width: 20%;
-  border: 1px solid var(--LightGrayCl);
+  border: 1px solid var(--lightCl);
   border-radius: 20px;
   overflow: hidden;
   margin-right: 2rem;

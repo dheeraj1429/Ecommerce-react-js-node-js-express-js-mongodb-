@@ -20,7 +20,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // Routes
-app.use('/products/', indexRouter);
+app.use('/products', indexRouter);
 
 // Server
 app.listen(port, () => {

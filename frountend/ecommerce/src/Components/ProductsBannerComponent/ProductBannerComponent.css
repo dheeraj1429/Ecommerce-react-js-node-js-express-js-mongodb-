@@ -1,0 +1,10 @@
+.Products__banerr__inner_div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Products__banerr__inner_div img {
+  cursor: pointer;
+  margin-right: 1rem;
+}

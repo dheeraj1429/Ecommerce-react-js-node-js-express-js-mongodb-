@@ -1,28 +1,20 @@
 import React, { useState } from 'react';
 
+import { searchProduct } from '../../Redux/Action/action';
+import { useSelector, useDispatch } from 'react-redux';
+
 import './SearchBarComponent.css';
 
 function SearchBarComponent() {
+  const dispatch = useDispatch();
   const [SearchData, setSearchData] = useState('');
 
   const ChangeSearchInput = function (e) {
     setSearchData(e.target.value);
   };
 
-  const SendData = async function () {
-    const res = await fetch(`/products/get/${SearchData}`, {
-      headers: {
-        'Content-type': 'application/json',
-      },
-      method: 'POST',
-
-      body: JSON.stringify({
-        SearchData,
-      }),
-    });
-
-    const data = await res.json();
-    console.log(data);
+  const SendData = function () {
+    dispatch(searchProduct(SearchData));
   };
 
   return (
