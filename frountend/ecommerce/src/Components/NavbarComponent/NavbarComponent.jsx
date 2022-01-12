@@ -1,32 +1,35 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import SearchBarComponent from '../SearchBarComponent/SearchBarComponent';
 
 import './NavbarComponent.css';
 
 function NavbarComponent() {
-   return (
-      <div className="Navbar_Div side_padding">
-         <div className="padding_one Navbar__Inner_Div">
-            <div className="Navbar__inner_logo">
-               <h1>Readymart.</h1>
-            </div>
+  return (
+    <div className="Navbar_Div side_padding">
+      <div className="padding_one Navbar__Inner_Div">
+        <div className="Navbar__inner_logo">
+          <Link to="/">
+            <h1>Readymart.</h1>
+          </Link>
+        </div>
 
-            <SearchBarComponent />
+        <SearchBarComponent />
 
-            <div className="NavbarBar__Icons_Div">
-               <i class="far fa-heart"></i>
-               <div className="MyCart">
-                  <div className="TotalItem">
-                     <p>1</p>
-                  </div>
-                  <i class="fas fa-shopping-bag"></i>
-                  <p>My Cart</p>
-               </div>
+        <div className="NavbarBar__Icons_Div">
+          <i class="far fa-heart"></i>
+          <div className="MyCart">
+            <div className="TotalItem">
+              <p>1</p>
             </div>
-         </div>
+            <i class="fas fa-shopping-bag"></i>
+            <p>My Cart</p>
+          </div>
+        </div>
       </div>
-   );
+    </div>
+  );
 }
 
 export default NavbarComponent;

@@ -1,0 +1,30 @@
+.SideBar_Div {
+  width: 20%;
+  border: 1px solid var(--LightGrayCl);
+  border-radius: 20px;
+  overflow: hidden;
+  margin-right: 2rem;
+}
+
+.AllCategory_div {
+  width: 100%;
+  padding: 1rem 2rem;
+  background-color: var(--darkRed);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.AllCategory_div > div {
+  display: flex;
+}
+
+.AllCategory_div > div i,
+.AllCategory_div i {
+  color: var(--mainColor);
+}
+
+.AllCategory_div p {
+  color: var(--mainColor);
+  margin-left: 1rem;
+}

@@ -1,0 +1,18 @@
+.Category__sm_div {
+  padding: 0.5rem 1rem;
+  border-bottom: 1px solid var(--lightCl);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.Category__sm_div p {
+  font-size: 1rem;
+  color: var(--IconsColor);
+  font-weight: 600;
+}
+
+.Category__sm_div i {
+  color: var(--lightCl);
+}

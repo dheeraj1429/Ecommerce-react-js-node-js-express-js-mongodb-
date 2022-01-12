@@ -1,0 +1,9 @@
+.ShopNow_button {
+  padding: 0.9rem 2.8rem;
+  border-radius: 3px;
+  border: none;
+  background-color: var(--darkRed);
+  color: var(--mainColor);
+  cursor: pointer;
+  font-size: 0.8rem;
+}

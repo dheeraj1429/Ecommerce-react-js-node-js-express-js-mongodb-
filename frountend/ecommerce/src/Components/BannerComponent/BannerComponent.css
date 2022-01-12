@@ -1,2 +1,27 @@
-.Banner__Div {
+.Banner__inner_div {
+  display: flex;
+  align-items: center;
+}
+
+.Banner_content_div {
+  width: 80%;
+  height: 522px;
+  padding: 2rem;
+  background-position: top;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+}
+
+.Banner_Contnet {
+  max-width: 700px;
+}
+
+.Banner_Contnet h1 {
+  font-size: 6rem;
+}
+
+.Banner_Contnet p {
+  color: var(--IconsColor);
+  margin-bottom: 4rem;
 }
