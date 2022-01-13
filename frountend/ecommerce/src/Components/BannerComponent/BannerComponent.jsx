@@ -25,7 +25,7 @@ function BannerComponent() {
               possimus. Maxime explicabo tempora id omnis aliquam facere dignissimos quasi officiis et.
             </p>
 
-            <CustomButtonComponent type={'button'} ButtonClass={'ShopNow_button'} />
+            <CustomButtonComponent type={'button'} ButtonClass={'ShopNow_button'} textContent={'SHOP NOW'} />
           </div>
         </div>
       </div>

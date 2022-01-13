@@ -1,0 +1,49 @@
+.DropDown__Div {
+  width: 100%;
+}
+.dropDown_heading_div,
+.dropDown_heading_div_active {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.dropDown_heading_div h1 {
+  font-size: 1.1rem;
+  color: var(--SmoothGrayLight);
+}
+.dropDown_heading_div i {
+  color: var(--SmoothGrayLight);
+}
+.dropDown_heading_div_active h1 {
+  color: var(--HeadingColor);
+  font-size: 1.1rem;
+  font-weight: 800;
+}
+.dropDown_heading_div_active i {
+  color: var(--HeadingColor);
+}
+.Drop__List {
+  padding: 0 2rem;
+  height: 2px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+.Drop__List_action {
+  height: auto;
+  overflow: visible;
+}
+.Drop__List ul li {
+  list-style: none;
+  margin: 1.6rem 0;
+}
+.Drop__List ul li p {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--LightGray);
+  cursor: pointer;
+}
+.Drop__List_action {
+  color: var(--HeadingColor) !important;
+}

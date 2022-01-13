@@ -1,3 +1,6 @@
+.CustomButton {
+  cursor: pointer;
+}
 .ShopNow_button {
   padding: 0.9rem 2.8rem;
   border-radius: 5px;
@@ -6,4 +9,20 @@
   color: var(--mainColor);
   cursor: pointer;
   font-size: 0.8rem;
+}
+.Open_Doc {
+  background-color: transparent;
+  border: 2px solid var(--HeadingColor);
+  padding: 0.6rem 1.3rem;
+  border-radius: 4px;
+  color: var(--HeadingColor);
+}
+.Setup_Details {
+  padding: 0.6rem 1.2rem;
+  margin-left: 1rem;
+  border: none;
+  background-color: transparent;
+  color: var(--LightGray);
+  border: 1px solid var(--lightCl);
+  border-radius: 4px;
 }

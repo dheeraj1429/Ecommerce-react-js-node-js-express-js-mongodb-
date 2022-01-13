@@ -1,0 +1,21 @@
+.DashBoard_Edit_Div {
+  width: 100%;
+  height: 100vh;
+}
+.DashBoard_Edit_Div {
+  padding: 2rem 3rem;
+}
+.DashBoard_Heading_div h1 {
+  font-size: 1.8rem;
+}
+.DashBoard_Heading_div {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.DashBoard_About p {
+  margin: 2rem 0;
+  color: var(--LightGray);
+  max-width: 80%;
+}

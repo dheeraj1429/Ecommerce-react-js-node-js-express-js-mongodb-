@@ -1,0 +1,13 @@
+.DashBoard_Sidebar_Div {
+  width: 350px;
+  height: 100vh;
+  border: 1px solid var(--lightCl);
+  padding: 2rem;
+}
+
+.Dashboard__Content h1 {
+  margin: 2rem 0;
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--IconsColor);
+}
