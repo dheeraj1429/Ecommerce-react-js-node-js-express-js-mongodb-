@@ -26,3 +26,10 @@
   border: 1px solid var(--lightCl);
   border-radius: 4px;
 }
+.add_product {
+  border: none;
+  padding: 0.7rem 2.5rem;
+  background-color: var(--HeadingColor);
+  color: var(--mainColor);
+  border-radius: 5px;
+}

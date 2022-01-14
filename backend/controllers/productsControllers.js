@@ -2,17 +2,27 @@ const Product = require('../models/productsSchema');
 
 // Create products => Admin
 const postProducts = async (req, res) => {
+  console.log(`post product`);
   try {
     const storeProduct = await Product.create(req.body);
-    res.status(201).json({
-      storeProduct,
-    });
+    console.log(req.body);
+    if (storeProduct) {
+      res.status(201).json({
+        success: true,
+        result: 'Product Added into the store',
+      });
+    } else {
+      res.status(400).json({
+        success: false,
+        result: 'someting woring',
+      });
+    }
   } catch (err) {
     console.log(err);
   }
 };
 
-// Fetch all products
+// Fetch all products => User
 const getAllProducts = async (req, res) => {
   try {
     const allProduct = await Product.find();
@@ -32,7 +42,7 @@ const getAllProducts = async (req, res) => {
   }
 };
 
-// featch product by name
+// featch product by name => User
 const getProductByName = async (req, res) => {
   try {
     const { x } = req.params;

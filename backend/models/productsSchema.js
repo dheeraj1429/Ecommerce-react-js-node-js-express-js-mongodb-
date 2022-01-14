@@ -10,6 +10,13 @@ const productSchema = new mongoose.Schema({
     type: String,
     required: [true, 'please enter the product discription'],
   },
+  gender: {
+    type: String,
+    default: 'both',
+  },
+  brand: {
+    type: String,
+  },
   price: {
     type: Number,
     required: [true, 'please enter the product price'],
@@ -21,22 +28,22 @@ const productSchema = new mongoose.Schema({
   image: [
     {
       public_id: {
-        type: String,
-        required: true,
+        type: Number,
+        required: [true, 'please enter the id'],
       },
       url: {
         type: String,
-        required: true,
+        required: [true, 'please enter the image url'],
       },
     },
   ],
   category: {
     type: String,
-    required: true,
+    required: [true, 'please selecte category'],
   },
   stock: {
     type: Number,
-    required: true,
+    default: 1,
     maxlength: [4, 'max charecter'],
   },
   review: {

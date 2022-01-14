@@ -1,0 +1,17 @@
+.product_heading_Input {
+  font-size: 1.3rem;
+  color: var(--IconsColor);
+  margin: 1rem 0;
+}
+.Product_Input_Section {
+  width: 100%;
+  height: 50px;
+  padding: 1rem;
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid var(--LightGray);
+}
+.Product__upload_div p {
+  margin: 1rem 0;
+  color: var(--SmoothGrayLight);
+}

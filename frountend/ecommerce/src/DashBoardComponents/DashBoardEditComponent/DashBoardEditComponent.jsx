@@ -1,7 +1,8 @@
 import React from 'react';
 
 import CustomButtonComponent from '../../Components/CustomButtonComponent/CustomButtonComponent';
-import ProductUploadComponent from '../ProductUploadComponent/ProductUploadComponent';
+import ProductUploadFirstComponent from '../ProductUploadComponent/ProductUploadComponent';
+import ProductUploadSecondComponent from '../ProductUploadSecondComponent/ProductUploadSecondComponent';
 
 import './DashBoardEditComponent.css';
 
@@ -25,7 +26,10 @@ function DashBoardEditComponent() {
           </p>
         </div>
 
-        <ProductUploadComponent />
+        <div className="DashBoard_Uploding_Aria_div">
+          <ProductUploadFirstComponent />
+          <ProductUploadSecondComponent />
+        </div>
       </div>
     </div>
   );

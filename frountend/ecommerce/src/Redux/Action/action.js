@@ -49,3 +49,36 @@ export const fetchAllProducts = function () {
     });
   };
 };
+
+// Upload state values into the redux store
+export const uploadProduct = function (data) {
+  console.log(data);
+  return {
+    type: ACTION_TYPE.UPLOAD_PRODUCT,
+    payload: data,
+  };
+};
+
+// Post a product into database
+export const PostProducts = function (data) {
+  return async function (dispatch) {
+    try {
+      const ProductUploadRef = await fetch('/products/new', {
+        headers: {
+          'Content-type': 'application/json',
+        },
+        method: 'POST',
+        body: JSON.stringify(data),
+      });
+
+      const DataRef = await ProductUploadRef.json();
+
+      dispatch({
+        type: ACTION_TYPE.UPLOAD_PRODUCT,
+        payload: DataRef,
+      });
+    } catch (err) {
+      console.log(err);
+    }
+  };
+};

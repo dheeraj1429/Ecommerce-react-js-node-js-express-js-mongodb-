@@ -4,6 +4,7 @@ const initalState = {
   num: 0,
   SearchProduct: [],
   FetchAllProducts: [],
+  ProductUploadInfo: null,
 };
 
 const userReducer = (state = initalState, action) => {
@@ -18,6 +19,12 @@ const userReducer = (state = initalState, action) => {
       return {
         ...state,
         FetchAllProducts: action.payload,
+      };
+
+    case ACTION_TYPE.UPLOAD_PRODUCT:
+      return {
+        ...state,
+        ProductUploadInfo: action.payload,
       };
 
     default:

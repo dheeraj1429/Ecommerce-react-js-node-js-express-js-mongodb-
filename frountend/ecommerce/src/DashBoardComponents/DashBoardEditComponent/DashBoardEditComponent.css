@@ -19,3 +19,6 @@
   color: var(--LightGray);
   max-width: 80%;
 }
+.DashBoard_Uploding_Aria_div {
+  display: flex;
+}

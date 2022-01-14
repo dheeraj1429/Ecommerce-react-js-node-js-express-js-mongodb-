@@ -1,0 +1,37 @@
+.Products_imge_show {
+  width: 100%;
+  margin-bottom: 0.5rem;
+  padding: 0.5rem 0;
+}
+.Products_show_image_div {
+  width: auto;
+  height: auto;
+}
+.Products_show_image_div img {
+  width: auto;
+  height: 200px;
+  object-fit: cover;
+}
+.Light_para {
+  color: var(--LightGray);
+  margin-top: 0.5rem;
+}
+
+.Photo_Selected_div {
+  width: 200px;
+  height: 200px;
+  border: 1px dotted var(--LightGray);
+  border-radius: 5px;
+  display: grid;
+  place-content: center;
+  text-align: center;
+}
+.Photo_Selected_div i {
+  color: var(--SmoothGrayLight);
+  margin-bottom: 0.5rem;
+}
+.Photo_Selected_div p {
+  font-size: 0.8rem;
+  margin-top: 0.4rem;
+  color: var(--SmoothGrayLight);
+}
