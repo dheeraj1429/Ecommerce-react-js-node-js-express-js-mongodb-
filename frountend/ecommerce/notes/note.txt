@@ -1,0 +1,6 @@
+✓ 1 - upload the product from the dashboard 
+✓ 2 - upload product details and store into the database 
+✓ 3 - search feature
+✓ 4 - when the user comes into the app fetch the all product from the database and store into the redux store
+-> 5 - Edit all database products from the dashboard.
+-> 6 - All product details ( dashboard edit option )

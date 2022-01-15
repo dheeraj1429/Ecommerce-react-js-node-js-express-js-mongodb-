@@ -16,7 +16,6 @@
   color: var(--LightGray);
   margin-top: 0.5rem;
 }
-
 .Photo_Selected_div {
   width: 200px;
   height: 200px;
@@ -34,4 +33,12 @@
   font-size: 0.8rem;
   margin-top: 0.4rem;
   color: var(--SmoothGrayLight);
+}
+.Products_Main_image {
+  width: 100%;
+  height: 100%;
+}
+.Products_Main_image .Photo_Selected_div {
+  height: 100%;
+  width: 100%;
 }

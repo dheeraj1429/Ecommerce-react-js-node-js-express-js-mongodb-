@@ -52,7 +52,6 @@ export const fetchAllProducts = function () {
 
 // Upload state values into the redux store
 export const uploadProduct = function (data) {
-  console.log(data);
   return {
     type: ACTION_TYPE.UPLOAD_PRODUCT,
     payload: data,
@@ -72,9 +71,8 @@ export const PostProducts = function (data) {
       });
 
       const DataRef = await ProductUploadRef.json();
-
       dispatch({
-        type: ACTION_TYPE.UPLOAD_PRODUCT,
+        type: ACTION_TYPE.UPLOAD_PRODUCTS_STATUS,
         payload: DataRef,
       });
     } catch (err) {

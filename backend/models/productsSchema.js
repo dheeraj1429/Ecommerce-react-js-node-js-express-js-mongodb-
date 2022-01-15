@@ -37,6 +37,13 @@ const productSchema = new mongoose.Schema({
       },
     },
   ],
+  galleryImage: [
+    {
+      img: {
+        type: String,
+      },
+    },
+  ],
   category: {
     type: String,
     required: [true, 'please selecte category'],

@@ -1,0 +1,10 @@
+.Edit_button {
+  width: 100%;
+  padding: 1rem;
+  border: none;
+  background-color: var(--lightEditColor);
+  margin-bottom: 1rem;
+  cursor: pointer;
+  color: var(--HeadingColor);
+  border-radius: 10px;
+}

@@ -3,9 +3,9 @@ const Product = require('../models/productsSchema');
 // Create products => Admin
 const postProducts = async (req, res) => {
   console.log(`post product`);
+  console.log(req.body);
   try {
     const storeProduct = await Product.create(req.body);
-    console.log(req.body);
     if (storeProduct) {
       res.status(201).json({
         success: true,
@@ -65,8 +65,24 @@ const getProductByName = async (req, res) => {
   }
 };
 
+// Get all product into api => GET
+const getAllProductApi = async function (req, res) {
+  const api = await Product.find();
+  if (api) {
+    res.status(200).json({
+      success: true,
+      api,
+    });
+  } else {
+    res.status(400).json({
+      message: 'not found',
+    });
+  }
+};
+
 module.exports = {
   postProducts,
   getAllProducts,
   getProductByName,
+  getAllProductApi,
 };

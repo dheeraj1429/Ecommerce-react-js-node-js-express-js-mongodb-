@@ -22,6 +22,10 @@ function DashBoardSiderBarComponent() {
               data: 'Upload Products',
               id: 1,
             },
+            {
+              data: 'Edit Products',
+              id: 2,
+            },
           ],
         }}
       />

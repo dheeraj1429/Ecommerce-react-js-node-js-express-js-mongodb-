@@ -2,3 +2,16 @@
   padding: 0 2rem;
   width: 55%;
 }
+.Images_prev {
+  display: flex;
+}
+.Images_prev > div {
+  margin-right: 1rem;
+}
+.Gallery_image_div {
+  display: flex;
+}
+.Gallery_image_div > div {
+  width: 100%;
+  padding-right: 1rem;
+}

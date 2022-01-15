@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 
 import './DashBoardSelectImageComponent.css';
 
-function DashBoardSelectImageComponent({ UploadProduct }) {
+function DashBoardSelectImageComponent({ UploadProduct, ClassData }) {
   return (
-    <div className="Products_show_image_div">
+    <div className={ClassData ? `Products_show_image_div ${ClassData}` : 'Products_show_image_div'}>
       {!UploadProduct ? (
         <div className="Photo_Selected_div">
           <i class="far fa-file-image"></i>

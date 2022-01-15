@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-
+import React, { useState, useEffect } from 'react';
 import { uploadProduct } from '../../Redux/Action/action';
+import { useSelector } from 'react-redux';
 import { useDispatch } from 'react-redux';
 import InputComponent from '../InputComponent/InputComponent';
 import SelectionDropDownComponent from '../SelectionDropDownComponent/SelectionDropDownComponent';
@@ -8,6 +8,7 @@ import SelectionDropDownComponent from '../SelectionDropDownComponent/SelectionD
 import './ProductUploadComponent.css';
 
 function ProductUploadFirstComponent() {
+  const selector = useSelector((state) => state.userStoreData.state.ProductUploadStatus);
   const dispatch = useDispatch();
 
   const [UploadProduct, setUploadProduct] = useState({
@@ -30,7 +31,7 @@ function ProductUploadFirstComponent() {
   const { name, category, gender, stock, brand, discription, price, rating } = UploadProduct;
 
   const getAllInfo = function () {
-    if (name && category && gender && stock && brand && discription && price && rating) {
+    if (name && category && stock && brand && discription && price) {
       dispatch(
         uploadProduct({
           name,
@@ -81,17 +82,7 @@ function ProductUploadFirstComponent() {
             ChangeFunction={ChangeInputValue}
             Heading={'gender'}
             options={{
-              data: [
-                {
-                  el: 'Women',
-                },
-                {
-                  el: 'Men',
-                },
-                {
-                  el: 'Both',
-                },
-              ],
+              data: [{ el: 'Women' }, { el: 'Men' }, { el: 'Both' }],
             }}
           />
         </div>

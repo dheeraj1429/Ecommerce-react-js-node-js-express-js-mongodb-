@@ -1,0 +1,68 @@
+.ProductsEditDiv {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(34, 34, 34, 0.363);
+  top: 0;
+  left: 0;
+  display: none;
+}
+.ProductsEditDivActive {
+  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.ProductsEdit__inner_div {
+  position: relative;
+  width: 90%;
+  height: 90%;
+  background-color: var(--mainColor);
+  border-radius: 10px;
+  padding: 2rem;
+}
+.ProductsEdit__inner_div h1 {
+  color: var(--IconsColor);
+}
+.ProductEdit_Inner_content_div {
+  display: flex;
+  padding: 2rem 0;
+}
+.ProductEdit_Inner_content_div > div {
+  margin-right: 2rem;
+}
+.ProductEdit_Inner_content_div > div:nth-child(2) {
+  width: 40%;
+}
+.ProductEdit_Inner_content_div > div:nth-child(3) {
+  width: 40%;
+}
+.ProductEdit_Inner_content_div .Photo_Selected_div {
+  margin-bottom: 2rem;
+}
+.Products_edit_content_div h3 {
+  font-size: 0.9rem;
+  color: var(--IconsColor);
+}
+.Products_edit_content_div h4 {
+  font-size: 1.5rem;
+  margin-top: 0.7rem;
+}
+.Discription {
+  margin-top: 2rem;
+}
+.Products_edit_content_div h5 {
+  margin-top: 0.7rem;
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: var(--SmoothGrayLight);
+  text-align: justify;
+}
+.Products_edit_content_div i {
+  cursor: pointer;
+  margin-left: 1rem;
+  color: var(--lightCl);
+}
+.Products_edit_content_div i:hover {
+  color: var(--IconsColor);
+}

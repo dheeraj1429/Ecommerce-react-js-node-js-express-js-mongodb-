@@ -5,6 +5,7 @@ const initalState = {
   SearchProduct: [],
   FetchAllProducts: [],
   ProductUploadInfo: null,
+  ProductUploadStatus: [],
 };
 
 const userReducer = (state = initalState, action) => {
@@ -25,6 +26,12 @@ const userReducer = (state = initalState, action) => {
       return {
         ...state,
         ProductUploadInfo: action.payload,
+      };
+
+    case ACTION_TYPE.UPLOAD_PRODUCTS_STATUS:
+      return {
+        ...state,
+        ProductUploadStatus: action.payload,
       };
 
     default:

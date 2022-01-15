@@ -1,0 +1,27 @@
+.Products__card {
+  width: 350px;
+  border-radius: 6px;
+  box-shadow: 0 0 20px #e1e1e1;
+  background-color: var(--mainColor);
+  text-align: center;
+  padding: 0.8rem 2rem;
+  margin-bottom: 1.5rem;
+}
+.Products_Card_img {
+  width: auto;
+  height: auto;
+}
+.Products_Card_img img {
+  width: auto;
+  height: 230px;
+}
+.Product_info_div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.Product_info_div h3 {
+  color: var(--IconsColor);
+  font-size: 0.9rem;
+}
