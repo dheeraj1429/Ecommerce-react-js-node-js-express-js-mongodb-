@@ -1,0 +1,21 @@
+.product_Heading_details {
+  font-size: 0.9rem;
+  color: var(--IconsColor);
+}
+.TagClDiv h4 {
+  font-size: 1.5rem;
+  margin-top: 0.7rem;
+}
+.Discription {
+  margin-top: 2rem;
+}
+.TagClDiv h5 {
+  margin-top: 0.7rem;
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: var(--SmoothGrayLight);
+  text-align: justify;
+}
+.content_write {
+  outline: none;
+}

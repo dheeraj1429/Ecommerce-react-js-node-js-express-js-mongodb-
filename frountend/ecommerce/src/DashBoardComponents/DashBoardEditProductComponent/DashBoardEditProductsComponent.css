@@ -3,9 +3,19 @@
   height: 100vh;
   padding: 2rem 3rem;
   background-color: var(--Lightbg);
+  position: relative;
 }
 .AllProducts_div {
   padding: 2rem 0;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+}
+.spnner_div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.spnner_div img {
+  width: 80px;
 }

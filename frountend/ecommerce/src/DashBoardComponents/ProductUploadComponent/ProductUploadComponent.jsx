@@ -8,7 +8,7 @@ import SelectionDropDownComponent from '../SelectionDropDownComponent/SelectionD
 import './ProductUploadComponent.css';
 
 function ProductUploadFirstComponent() {
-  const selector = useSelector((state) => state.userStoreData.state.ProductUploadStatus);
+  const selector = useSelector((state) => state.userStoreData.ProductUploadStatus);
   const dispatch = useDispatch();
 
   const [UploadProduct, setUploadProduct] = useState({

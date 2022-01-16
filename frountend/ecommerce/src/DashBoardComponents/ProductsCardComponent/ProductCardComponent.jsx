@@ -1,10 +1,9 @@
 import React from 'react';
-
 import CustomEditButtonComponent from '../../Components/CustomEditButtonComponent/CustomEditButtonComponent';
 
 import './ProductCardComponent.css';
 
-function ProductCardComponent({ name, image, price }) {
+function ProductCardComponent({ name, image, price, Function }) {
   return (
     <div className="Products__card">
       <div className="Products_Card_img">
@@ -16,7 +15,7 @@ function ProductCardComponent({ name, image, price }) {
         <h3>${price}</h3>
       </div>
 
-      <CustomEditButtonComponent TextContent={'Edit Product'} />
+      <CustomEditButtonComponent TextContent={'Edit Product'} onClick={Function} />
     </div>
   );
 }

@@ -80,3 +80,18 @@ export const PostProducts = function (data) {
     }
   };
 };
+
+// Store Selcted data into the store
+export const dashboardSelectedProduct = function (data) {
+  return {
+    type: ACTION_TYPE.DASHBOARD_SELECTED_PRODUCTS,
+    payload: data,
+  };
+};
+
+export const showEditPopup = function (data) {
+  return {
+    type: ACTION_TYPE.SHOW_EDIT_POPUP,
+    payload: data,
+  };
+};

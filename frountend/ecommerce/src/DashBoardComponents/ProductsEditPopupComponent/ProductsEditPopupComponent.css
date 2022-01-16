@@ -40,29 +40,16 @@
 .ProductEdit_Inner_content_div .Photo_Selected_div {
   margin-bottom: 2rem;
 }
-.Products_edit_content_div h3 {
-  font-size: 0.9rem;
-  color: var(--IconsColor);
+.Product_details_flex {
+  display: flex;
+  align-items: center;
 }
-.Products_edit_content_div h4 {
-  font-size: 1.5rem;
-  margin-top: 0.7rem;
+.Product_details_flex > div {
+  width: 50%;
 }
-.Discription {
-  margin-top: 2rem;
-}
-.Products_edit_content_div h5 {
-  margin-top: 0.7rem;
-  font-size: 0.9rem;
-  font-weight: 400;
-  color: var(--SmoothGrayLight);
-  text-align: justify;
-}
-.Products_edit_content_div i {
+.closeButton {
+  position: absolute;
+  top: 20px;
+  right: 30px;
   cursor: pointer;
-  margin-left: 1rem;
-  color: var(--lightCl);
-}
-.Products_edit_content_div i:hover {
-  color: var(--IconsColor);
 }

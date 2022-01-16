@@ -1,54 +1,48 @@
-import React, { useState } from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
+
+import { useDispatch, useSelector } from 'react-redux';
+import { showEditPopup } from '../../Redux/Action/action';
 import DashBoardSelectImageComponent from '../DashBoardSelectImageComponent/DashBoardSelectImageComponent';
+import ProductsDetailsComponent from '../ProductsDetailsComponent/ProductsDetailsComponent';
 
 import './ProductsEditPopupComponent.css';
 
 function ProductsEditPopupComponent({ isActive }) {
-  const [ProductDetails, setProductsDetails] = useState({
-    name: '',
-    description: '',
-  });
+  const selector = useSelector((state) => state.userStoreData.DashBoardSelectedProducts);
+  const dipatch = useDispatch();
 
-  const ChangeProductInput = function (e) {
-    let name = e.target.name;
-    let value = e.target.value;
-
-    setProductsDetails({ ...ProductDetails, [name]: value });
+  const CloseModalWindow = function () {
+    dipatch(showEditPopup(false));
   };
 
   return ReactDOM.createPortal(
-    <div className={!isActive ? 'ProductsEditDiv ' : 'ProductsEditDiv ProductsEditDivActive'}>
+    <div className={isActive == false ? 'ProductsEditDiv' : 'ProductsEditDiv ProductsEditDivActive'}>
       <div className="ProductsEdit__inner_div">
-        <h1>Edit Product</h1>
+        {selector !== null && selector.hasOwnProperty('id') && Object.keys(selector).length > 0 ? (
+          <>
+            <h1>Edit Product</h1>
+            <i className="fa fa-close closeButton" onClick={CloseModalWindow}></i>
+            <div className="ProductEdit_Inner_content_div">
+              <div>
+                {selector.galleryImage.length > 0
+                  ? selector.galleryImage.map((el) => <DashBoardSelectImageComponent key={el._id} UploadProduct={el.img} />)
+                  : null}
+              </div>
 
-        <div className="ProductEdit_Inner_content_div">
-          <div>
-            <DashBoardSelectImageComponent UploadProduct={''} />
-            <DashBoardSelectImageComponent UploadProduct={''} />
-            <DashBoardSelectImageComponent UploadProduct={''} />
-          </div>
+              <div>
+                <DashBoardSelectImageComponent UploadProduct={selector.image[0].url} ClassData={'Products_Main_image'} />
+              </div>
 
-          <div>
-            <DashBoardSelectImageComponent UploadProduct={''} ClassData={'Products_Main_image'} />
-          </div>
+              <div className="Products_edit_content_div">
+                <ProductsDetailsComponent Heading={'Product Name'} InnerTextContent={selector.name} Tag={'h4'} />
 
-          <div className="Products_edit_content_div">
-            <h3>
-              Product Name <i class="fas fa-pen"></i>
-            </h3>
-            <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, beatae.</h4>
-
-            <h3 className="Discription">
-              Discription <i class="fas fa-pen"></i>
-            </h3>
-            <h5>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia ducimus excepturi possimus cum voluptates accusantium quam error
-              accusamus numquam, est nisi minima dicta exercitationem facilis? Dolor, cupiditate sint. Ex iste accusantium pariatur quae beatae
-              cupiditate voluptatem asperiores? Ipsam tenetur, magnam in obcaecati ad ratione porro eveniet maiores officia quia recusandae?
-            </h5>
-          </div>
-        </div>
+                <ProductsDetailsComponent ClData={'Discription'} Heading={'Discription'} InnerTextContent={selector.discription} Tag={'h5'} />
+                <ProductsDetailsComponent Heading={'Category'} ClData={'Discription'} InnerTextContent={selector.category} Tag={'h4'} />
+              </div>
+            </div>
+          </>
+        ) : null}
       </div>
     </div>,
     document.getElementById('Products_Edit')

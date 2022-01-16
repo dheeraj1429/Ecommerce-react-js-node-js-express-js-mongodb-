@@ -1,14 +1,15 @@
 import { ACTION_TYPE } from '../ActionType/actionType';
 
-const initalState = {
-  num: 0,
+const initialState = {
   SearchProduct: [],
   FetchAllProducts: [],
   ProductUploadInfo: null,
   ProductUploadStatus: [],
+  DashBoardSelectedProducts: null,
+  ShowEditPopupComponent: false,
 };
 
-const userReducer = (state = initalState, action) => {
+const userReducer = (state = initialState, action) => {
   switch (action.type) {
     case ACTION_TYPE.SEARCH_PRODUCT:
       return {
@@ -34,9 +35,21 @@ const userReducer = (state = initalState, action) => {
         ProductUploadStatus: action.payload,
       };
 
+    case ACTION_TYPE.DASHBOARD_SELECTED_PRODUCTS:
+      return {
+        ...state,
+        DashBoardSelectedProducts: action.payload,
+      };
+
+    case ACTION_TYPE.SHOW_EDIT_POPUP:
+      return {
+        ...state,
+        ShowEditPopupComponent: action.payload,
+      };
+
     default:
       return {
-        state,
+        ...state,
       };
   }
 };
