@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 
 import { useDispatch, useSelector } from 'react-redux';
 import { showEditPopup } from '../../Redux/Action/action';
+import CustomButtonComponent from '../../Components/CustomButtonComponent/CustomButtonComponent';
 import DashBoardSelectImageComponent from '../DashBoardSelectImageComponent/DashBoardSelectImageComponent';
 import ProductsDetailsComponent from '../ProductsDetailsComponent/ProductsDetailsComponent';
 
@@ -39,6 +40,10 @@ function ProductsEditPopupComponent({ isActive }) {
 
                 <ProductsDetailsComponent ClData={'Discription'} Heading={'Discription'} InnerTextContent={selector.discription} Tag={'h5'} />
                 <ProductsDetailsComponent Heading={'Category'} ClData={'Discription'} InnerTextContent={selector.category} Tag={'h4'} />
+
+                <div className="Product_edit_button_div">
+                  <CustomButtonComponent textContent={'Update'} ButtonClass={'update_products'} type={'submit'} />
+                </div>
               </div>
             </div>
           </>

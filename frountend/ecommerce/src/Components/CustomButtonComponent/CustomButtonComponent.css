@@ -33,3 +33,7 @@
   color: var(--mainColor);
   border-radius: 5px;
 }
+.update_products {
+  background-color: var(--LightGray);
+  padding: 0.7rem 3rem;
+}
